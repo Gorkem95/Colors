@@ -30,7 +30,7 @@ unsigned int RGBToBGR(const unsigned int &color)
 
 unsigned int RGBToRGBA(const unsigned int& color, byte alpha = 255)
 {
-	return (((color & 0xFF0000) >> 16) << 24 | (((color & 0x00FF00) >> 8) << 16) | ((color & 0x0000FF) << 8) | alpha);
+	return (color << 8) | alpha;
 }
 
 unsigned int RGBAToRGB(const unsigned int &color)
